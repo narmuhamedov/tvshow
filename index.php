@@ -10,26 +10,32 @@
 <body>
 <center>
 
-
+    <button><a href="newfilm.php">Добавить</a></button>
+    <button><a href="edit.php">Изменить</a></button>
+    <button><a href="delfilm.php">Удалить</a></button>
+</center>
     <?php
     include ('db.php');
     $result = mysqli_query($link, "SELECT * FROM horror");
     $myrow = mysqli_fetch_array($result);
 
     do {
-        printf('<h1>%s</h1>
-    <p>%s</p>
-    <img src="%s" alt="">', $myrow['title'], $myrow['description'], $myrow['image']);
+        printf('
+    <div>
+        <ul>
+            <li>
+                <h2>%s</h2>
+                <button><a href="index_detail.php?id=%s">More</a></button>
+            </li>
+        </ul>
+    </div>', $myrow['title'], $myrow['id']);
     }
 
     while ($myrow = mysqli_fetch_array($result))
-
-
-
-
     ?>
 
-</center>
+
+
 
 </body>
 </html>
