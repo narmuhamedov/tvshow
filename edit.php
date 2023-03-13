@@ -25,7 +25,7 @@ else{
     $myrow2 = mysqli_fetch_array($result2);
     print <<<FORMA
         <form action="upate_films.php" method="post" enctype="multipart/form-data" id="form1">
-        <h2>Название фильма</h2><br>
+        <h2>Название фильма</h2><br>    
         <input type="text" name="title" value="$myrow2[title]" /><br>
         <h2>Описание фильма</h2><br>
         <textarea name="description"  cols="30" rows="10" >$myrow2[description]</textarea><br>

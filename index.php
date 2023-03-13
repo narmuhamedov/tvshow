@@ -13,6 +13,7 @@
     <button><a href="newfilm.php">Добавить</a></button>
     <button><a href="edit.php">Изменить</a></button>
     <button><a href="delfilm.php">Удалить</a></button>
+    <button><a href="enter.php">Войти</a></button>
 </center>
     <?php
     include ('db.php');
